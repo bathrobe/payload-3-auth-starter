@@ -10,7 +10,7 @@ const loginFooterLinks = (
     </div>
     <div className="text-sm text-center pb-2">
       Don't have an account?{' '}
-      <Link href="/auth/signup" className="text-blue-600 hover:underline">
+      <Link href="/auth/create-user" className="text-blue-600 hover:underline">
         Sign up
       </Link>
     </div>

@@ -26,3 +26,33 @@ export const LoginFormSchema = z.object({
     .email('This is not a valid email.'),
   password: passwordSchema,
 })
+
+export const CreateUserFormSchema = z.object({
+  name: z.string().min(1, { message: 'This field has to be filled.' }),
+  email: z
+    .string()
+    .min(1, {
+      message: 'This field has to be filled.',
+    })
+    .email('This is not a valid email.'),
+  password: passwordSchema,
+})
+
+export const ForgotPasswordFormSchema = z.object({
+  email: z
+    .string()
+    .min(1, {
+      message: 'This field has to be filled.',
+    })
+    .email('This is not a valid email.'),
+})
+
+export const ResetPasswordFormSchema = z
+  .object({
+    newPassword: passwordSchema,
+    confirmPassword: passwordSchema,
+  })
+  .refine((data) => data.newPassword === data.confirmPassword, {
+    message: "Passwords don't match",
+    path: ['confirmPassword'],
+  })

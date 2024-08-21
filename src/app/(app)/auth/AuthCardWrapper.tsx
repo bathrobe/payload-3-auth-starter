@@ -6,7 +6,6 @@ import {
   CardTitle,
   CardFooter,
 } from '@/lib/shadcn/components/ui/card'
-import Link from 'next/link'
 
 export default function AuthCardWrapper({
   children,
