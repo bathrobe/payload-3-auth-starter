@@ -36,9 +36,9 @@ export default function LoginForm() {
     setError(null)
     setLoading(true)
     const result = await loginUser(values)
-    console.log(result)
     if (result.success) {
       router.push('/')
+      router.refresh()
     } else {
       setError(result.error)
       setLoading(false)

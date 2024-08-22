@@ -38,9 +38,12 @@ const Logout = () => {
   }
 
   return (
-    <Button variant="ghost" onClick={logout}>
+    <div
+      className="cursor-pointer text-gray-600 hover:text-gray-800 transition-colors"
+      onClick={logout}
+    >
       Logout
-    </Button>
+    </div>
   )
 }
 
