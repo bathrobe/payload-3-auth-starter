@@ -37,7 +37,11 @@ const Logout = () => {
     router.refresh()
   }
 
-  return <Button onClick={logout}>Logout</Button>
+  return (
+    <Button variant="ghost" onClick={logout}>
+      Logout
+    </Button>
+  )
 }
 
 export default Logout
